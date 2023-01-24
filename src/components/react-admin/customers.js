@@ -35,9 +35,9 @@ export const CustomerList = () => {
           <EditButton />
         </SimpleList>
       ) : (
-        <Datagrid>
+        <Datagrid bulkActionButtons={false}>
           <TextField source="id" />
-          <ReferenceField source="userId" reference="users" />
+          <ReferenceField source="user_id" reference="users" />
           <TextField source="first_name" />
           <TextField source="last_name" />
           <TextField source="job_title" />
@@ -59,7 +59,7 @@ export const CustomerEdit = () => (
     <Edit title={<CustomerTitle />}>
     <SimpleForm>
         <TextInput source="id" disabled />
-        <ReferenceInput source="userId" reference="users" />
+        <ReferenceInput source="user_id" reference="users" />
         <TextInput source="first_name" />
         <TextInput source="last_name" />
         <TextInput source="job_title" />
