@@ -18,7 +18,7 @@ import { useMediaQuery } from '@mui/material';
 
 const customerFilters = [
     <TextInput source="q" label="Search" alwaysOn />,
-    <ReferenceInput source="userId" label="User" reference="users" />
+    <ReferenceInput source="user_id" label="User" reference="users" />
 ];
 
 export const CustomerList = () => {
@@ -72,7 +72,7 @@ export const CustomerEdit = () => (
 export const CustomerCreate = () => (
     <Create>
         <SimpleForm>
-          <ReferenceInput source="userId" reference="users" />
+          <ReferenceInput source="user_id" reference="users" />
           <TextInput source="first_name" />
           <TextInput source="last_name" />
           <TextInput source="job_title" />
