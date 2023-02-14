@@ -1,5 +1,6 @@
 // in src/components/react-admin/artworks.js
 import {
+
   List,
   SimpleList,
   Datagrid,
@@ -8,10 +9,13 @@ import {
   TextInput
 } from 'react-admin';
 
+    
+
 import { useRecordContext} from 'react-admin';
 import { useMediaQuery } from '@mui/material';
 
 const artworkFilters = [
+
   <TextInput source="q" label="Search" alwaysOn />
 ];
 
@@ -39,4 +43,5 @@ return (
     )}
   </List>
 );
-}
+
+  }

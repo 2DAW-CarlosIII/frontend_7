@@ -4,7 +4,6 @@ import { List, SimpleList, Datagrid, TextField, EmailField, TextInput } from 're
 
 const userFilters = [
   <TextInput source="q" label="Search" alwaysOn />
-  
 ];
 
 export const UserList = () => {
