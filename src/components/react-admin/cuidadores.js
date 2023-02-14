@@ -66,7 +66,6 @@ export const CuidadorList = () => {
         <TextInput source="email" />
         <TextInput source="Domicilio" />
         <TextInput source="Comunidad" />
-        <TextInput source="email" />
     </SimpleForm>
     </Edit>
 );
@@ -82,7 +81,6 @@ export const CuidadorCreate = () => (
         <TextInput source="email" />
         <TextInput source="Domicilio" />
         <TextInput source="Comunidad" />
-        <TextInput source="email" />
       </SimpleForm>
   </Create>
   );
