@@ -4,6 +4,7 @@ import jsonServerProvider from 'ra-data-json-server';
 import { UserList, UserEdit, UserCreate } from 'components/react-admin/users';
 import { CustomerList, CustomerEdit, CustomerCreate } from 'components/react-admin/customers';
 import { ArtworkList} from 'components/react-admin/artworks';
+import { CuidadorList, CuidadorEdit, CuidadorCreate } from 'components/react-admin/cuidadores';
 
 //TODO eliminar las dos líneas siguientes
 import { PostList, PostEdit, PostCreate } from 'components/react-admin/posts';
@@ -57,6 +58,7 @@ const RAdmin = () => {
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
     <Resource name="users" list={UserList} icon={UserIcon} recordRepresentation="name" />
     <Resource name="artworks" list={ArtworkList} icon={ArtworkIcon} />
+    <Resource name="cuidadores" list={CuidadorList} edit={CuidadorEdit} create={CuidadorCreate} icon={PostIcon} />
   </Admin>
 )
 }
