@@ -3,9 +3,11 @@ import { Admin, Resource } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
 import { UserList, UserEdit, UserCreate } from 'components/react-admin/users';
 import { CustomerList, CustomerEdit, CustomerCreate } from 'components/react-admin/customers';
+
 import { ArtworkList} from 'components/react-admin/artworks';
 
 import { CuidadorList, CuidadorEdit, CuidadorCreate } from 'components/react-admin/cuidadores';
+import { ResidenciaList, ResidenciaEdit, ResidenciaCreate } from 'components/react-admin/residencias';
 
 //TODO eliminar las dos líneas siguientes
 import { PostList, PostEdit, PostCreate } from 'components/react-admin/posts';
@@ -18,7 +20,9 @@ import PostIcon from '@mui/icons-material/Book';
 import UserIcon from '@mui/icons-material/Group';
 import ArtworkIcon from '@mui/icons-material/Palette';
 import MigrationIcon from '@mui/icons-material/Storage';
-import CustomerIcon from '@mui/icons-material/SupportAgent';
+import CustomerIcon from '@mui/icons-material/AccountCircle';
+import CuidadorIcon from '@mui/icons-material/Favorite';
+import ResidenciaIcon from '@mui/icons-material/Apartment';
 
 import { default as Login } from 'pages/login';
 import { default as AuthProvider } from 'components/react-admin/authProvider';
@@ -61,7 +65,9 @@ const RAdmin = () => {
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
     <Resource name="users" list={UserList} icon={UserIcon} recordRepresentation="name" />
     <Resource name="artworks" list={ArtworkList} icon={ArtworkIcon} />
-    <Resource name="cuidadores" list={CuidadorList} edit={CuidadorEdit} create={CuidadorCreate} icon={PostIcon} />
+    <Resource name="cuidadores" list={CuidadorList} edit={CuidadorEdit} create={CuidadorCreate} icon={CuidadorIcon} />
+    <Resource name="residencias" list={ResidenciaList} icon={ResidenciaIcon} 
+     edit={ResidenciaEdit} create={ResidenciaCreate} />
   </Admin>
 )
 }
