@@ -5,6 +5,7 @@ import { UserList, UserEdit, UserCreate } from 'components/react-admin/users';
 import { CustomerList, CustomerEdit, CustomerCreate } from 'components/react-admin/customers';
 
 import { ArtworkList} from 'components/react-admin/artworks';
+import {HospitalList} from 'components/react-admin/hospitales'
 
 import { CuidadorList, CuidadorEdit, CuidadorCreate } from 'components/react-admin/cuidadores';
 import { ResidenciaList, ResidenciaEdit, ResidenciaCreate } from 'components/react-admin/residencias';
@@ -66,8 +67,9 @@ const RAdmin = () => {
     <Resource name="users" list={UserList} icon={UserIcon} recordRepresentation="name" />
     <Resource name="artworks" list={ArtworkList} icon={ArtworkIcon} />
     <Resource name="cuidadores" list={CuidadorList} edit={CuidadorEdit} create={CuidadorCreate} icon={CuidadorIcon} />
-    <Resource name="residencias" list={ResidenciaList} icon={ResidenciaIcon} 
+    <Resource name="residencias" list={ResidenciaList} icon={ResidenciaIcon}
      edit={ResidenciaEdit} create={ResidenciaCreate} />
+     <Resource name="hospitales" list={HospitalList} icon={ResidenciaIcon} />
   </Admin>
 )
 }

@@ -58,7 +58,7 @@ export const ResidenciaList = () => {
   export const ResidenciaEdit = () => (
     <Edit title={<ResidenciaTitle />}>
     <SimpleForm>
-      <TextField source="id" />
+      <TextField source="id" disabled />
       <TextField source="nombre" />
       <TextField source="CIF" />
       <TextField source="telefono" />
@@ -73,12 +73,12 @@ export const ResidenciaList = () => {
 export const ResidenciaCreate = () => (
   <Create>
       <SimpleForm>
-        <TextInput source="id" disabled/>
+        <TextInput source="id"/>
         <TextInput source="nombre" />
         <TextInput source="CIF" />
         <TextInput source="telefono" />
         <TextInput source="email" />
-        <TextInput source="Domicilio" />
+        <TextInput source="Direccion" />
         <TextInput source="Comunidad" />
         <TextInput source="Localidad" />
       </SimpleForm>
