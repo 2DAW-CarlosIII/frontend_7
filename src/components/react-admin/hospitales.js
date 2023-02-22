@@ -23,18 +23,18 @@ import {
     <List filters={hospitalFilters} >
       {isSmall ? (
         <SimpleList
-          primaryText={(record) => record.Nombre}
-          secondaryText={(record) => record.Municipio}
+          primaryText={(record) => record.nombre}
+          secondaryText={(record) => record.municipio}
           tertiaryText={(record) => record.telefono}
           linkType={(record) => 'show'}
         >
         </SimpleList>
       ) : (
         <Datagrid bulkActionButtons={false} >
-          <TextField source="Nombre" />
-          <TextField source="Municipio" />
-          <TextField source="Dirección" />
-          <TextField source="Teléfono" />
+          <TextField source="nombre" />
+          <TextField source="municipio" />
+          <TextField source="direccion" />
+          <TextField source="telefono" />
         </Datagrid>
       )}
     </List>
