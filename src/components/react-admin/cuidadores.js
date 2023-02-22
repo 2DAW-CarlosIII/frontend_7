@@ -36,6 +36,7 @@ export const CuidadorList = () => {
         ) : (
           <Datagrid bulkActionButtons={false}>
             <TextField source="id" />
+            <ReferenceField source="user_id" reference="users" />
             <TextField source="nombre" />
             <TextField source="apellidos" />
             <TextField source="dni" />
@@ -58,7 +59,8 @@ export const CuidadorList = () => {
   export const CuidadorEdit = () => (
     <Edit title={<CuidadorTitle />}>
     <SimpleForm>
-        <TextInput source="id" />
+        <TextInput source="id" disabled/>
+        <ReferenceInput source="user_id" reference="users" />
         <TextInput source="nombre" />
         <TextInput source="apellidos" />
         <TextInput source="dni" />
@@ -73,7 +75,7 @@ export const CuidadorList = () => {
 export const CuidadorCreate = () => (
   <Create>
       <SimpleForm>
-        <TextInput source="id" disabled/>
+      <ReferenceInput source="user_id" reference="users" />
         <TextInput source="nombre" />
         <TextInput source="apellidos" />
         <TextInput source="dni" />
