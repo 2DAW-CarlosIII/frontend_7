@@ -9,6 +9,7 @@ import {HospitalList} from 'components/react-admin/hospitales'
 
 import { CuidadorList, CuidadorEdit, CuidadorCreate } from 'components/react-admin/cuidadores';
 import { ResidenciaList, ResidenciaEdit, ResidenciaCreate } from 'components/react-admin/residencias';
+import { TarifaList, TarifaEdit, TarifaCreate } from 'components/react-admin/tarifas';
 
 //TODO eliminar las dos líneas siguientes
 import { PostList, PostEdit, PostCreate } from 'components/react-admin/posts';
@@ -24,6 +25,7 @@ import MigrationIcon from '@mui/icons-material/Storage';
 import CustomerIcon from '@mui/icons-material/AccountCircle';
 import CuidadorIcon from '@mui/icons-material/Favorite';
 import ResidenciaIcon from '@mui/icons-material/Apartment';
+import TarifaIcon from '@mui/icons-material/AttachMoney';
 
 import { default as Login } from 'pages/login';
 import { default as AuthProvider } from 'components/react-admin/authProvider';
@@ -69,6 +71,8 @@ const RAdmin = () => {
     <Resource name="cuidadores" list={CuidadorList} edit={CuidadorEdit} create={CuidadorCreate} icon={CuidadorIcon} />
     <Resource name="residencias" list={ResidenciaList} icon={ResidenciaIcon}
      edit={ResidenciaEdit} create={ResidenciaCreate} />
+      <Resource name="tarifas" list={TarifaList} icon={TarifaIcon}
+     edit={TarifaEdit} create={TarifaCreate} />
      <Resource name="hospitales" list={HospitalList} icon={ResidenciaIcon} />
   </Admin>
 )
