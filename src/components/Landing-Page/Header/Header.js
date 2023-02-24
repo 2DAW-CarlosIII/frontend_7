@@ -11,8 +11,8 @@ const Header = () => (
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link nav-izq underline" href="//codeply.com">
-                            Conócenos
+                        <a className="nav-link nav-izq underline" href="dashboard">
+                            Dashboard
                         </a>
                     </li>
                    
