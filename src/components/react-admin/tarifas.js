@@ -17,7 +17,8 @@ import { useRecordContext} from 'react-admin';
 import { useMediaQuery } from '@mui/material';
 
 const tarifaFilters = [
-    <TextInput source="q" label="Buscar" alwaysOn />
+    <TextInput source="q" label="Buscar" alwaysOn />,
+    <ReferenceInput source="cuidador_id" label="Cuidador" reference="cuidadores" />
     //A rellenar luego
 ];
 
@@ -27,18 +28,20 @@ export const TarifaList = () => {
     <List filters={tarifaFilters} >
       {isSmall ? (
         <SimpleList
-        primaryText={(record) => record.nombre}
-        secondaryText={(record) => record.precio}
-        tertiaryText={(record) => record.extras}
+        primaryText={(record) => record.diurna}
+        secondaryText={(record) => record.nocturna}
+        tertiaryText={(record) => record.festivos}
         >
           <EditButton />
         </SimpleList>
       ) : (
         <Datagrid bulkActionButtons={false}>
           <TextField source="id" />
-          <TextField source="nombre" />
-          <TextField source="precio" />
-          <TextField source="extras" />
+          <ReferenceField source="cuidador_id" reference="cuidadores" />
+          <TextField source="diurna" />
+          <TextField source="nocturna" />
+          <TextField source="festivos" />
+          <TextField source="personalizada" />
           <EditButton />
         </Datagrid>
       )}
@@ -48,16 +51,18 @@ export const TarifaList = () => {
 
 const TarifaTitle = () => {
   const record = useRecordContext();
-  return <span>Tarifa {record ? `"${record.nombre}"` : ''}</span>;
+  return <span>Tarifa {record ? `"${record.diurna}"` : ''}</span>;
 };
 
 export const TarifaEdit = () => (
     <Edit title={<TarifaTitle />}>
     <SimpleForm>
         <TextInput source="id" disabled />
-        <TextInput source="nombre" />
-        <TextInput source="precio" />
-        <TextInput source="extras" />
+        <ReferenceField source="cuidador_id" reference="cuidadores" />
+        <TextField source="diurna" />
+        <TextField source="nocturna" />
+        <TextField source="festivos" />
+        <TextField source="personalizada" />
     </SimpleForm>
     </Edit>
 );
@@ -65,9 +70,11 @@ export const TarifaEdit = () => (
 export const TarifaCreate = () => (
     <Create>
         <SimpleForm>
-          <TextInput source="nombre" />
-          <TextInput source="precio" />
-          <TextInput source="extras" />
+        <ReferenceField source="cuidador_id" reference="cuidadores" />
+        <TextField source="diurna" />
+        <TextField source="nocturna" />
+        <TextField source="festivos" />
+        <TextField source="personalizada" />
         </SimpleForm>
     </Create>
 );
