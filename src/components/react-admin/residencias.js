@@ -32,6 +32,7 @@ export const ResidenciaList = () => {
             secondaryText={(record) => record.CIF}
             tertiaryText={(record) => record.Direccion}
           >
+           <EditButton />
           </SimpleList>
         ) : (
           <Datagrid bulkActionButtons={false}>
@@ -43,6 +44,7 @@ export const ResidenciaList = () => {
             <TextField source="localidad" />
             <TextField source="email" />
             <TextField source="tipo" />
+
             <EditButton />
           </Datagrid>
         )}
