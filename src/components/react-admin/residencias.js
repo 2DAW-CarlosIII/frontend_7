@@ -29,8 +29,8 @@ export const ResidenciaList = () => {
         {isSmall ? (
           <SimpleList
             primaryText={(record) => record.nombre}
-            secondaryText={(record) => record.telefono}
-            tertiaryText={(record) => record.direccion}
+            secondaryText={(record) => record.CIF}
+            tertiaryText={(record) => record.Direccion}
           >
            <EditButton />
           </SimpleList>
@@ -42,8 +42,9 @@ export const ResidenciaList = () => {
             <TextField source="direccion" />
             <TextField source="cp" />
             <TextField source="localidad" />
-            <TextField source="telefono" />
             <TextField source="email" />
+            <TextField source="tipo" />
+
             <EditButton />
           </Datagrid>
         )}
@@ -59,14 +60,16 @@ export const ResidenciaList = () => {
   export const ResidenciaEdit = () => (
     <Edit title={<ResidenciaTitle />}>
     <SimpleForm>
-      <TextInput source="id" />
-      <TextInput source="nombre" />
-      <TextInput source="CIF" />
-      <TextInput source="direccion" />
-      <TextInput source="cp" />
-      <TextInput source="localidad" />
-      <TextInput source="telefono" />
-      <TextInput source="email" />
+      <TextField source="id" disabled />
+      <TextField source="nombre" />
+      <TextField source="CIF" />
+      <TextField source="telefono" />
+      <TextField source="email" />
+      <TextField source="direccion" />
+      <TextField source="cp" />
+      <TextField source="localidad" />
+      <TextField source="email" />
+      <TextField source="tipo" />
     </SimpleForm>
     </Edit>
 );
@@ -75,13 +78,15 @@ export const ResidenciaCreate = () => (
   <Create>
       <SimpleForm>
         <TextInput source="id"/>
-        <TextInput source="nombre" />
-        <TextInput source="CIF" />
-        <TextInput source="direccion" />
-        <TextInput source="cp" />
-        <TextInput source="localidad" />
-        <TextInput source="telefono" />
-        <TextInput source="email" />
+        <TextField source="nombre" />
+        <TextField source="CIF" />
+        <TextField source="telefono" />
+        <TextField source="email" />
+        <TextField source="direccion" />
+        <TextField source="cp" />
+        <TextField source="localidad" />
+        <TextField source="email" />
+        <TextField source="tipo" />
       </SimpleForm>
   </Create>
   );

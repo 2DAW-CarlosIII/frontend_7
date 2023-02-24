@@ -52,7 +52,7 @@ export const TarifaList = () => {
 
 const TarifaTitle = () => {
   const record = useRecordContext();
-  return <span>Tarifa {record ? `"${record.nombre}"` : ''}</span>;
+  return <span>Tarifa {record ? `"${record.diurna}"` : ''}</span>;
 };
 
 export const TarifaEdit = () => (
