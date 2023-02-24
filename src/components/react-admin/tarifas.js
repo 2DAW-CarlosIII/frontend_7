@@ -38,11 +38,10 @@ export const TarifaList = () => {
           <TextField source="id" />
           <ReferenceField source="cuidador_id" reference="cuidadores" >
             <TextField source="nombre" />
-            <TextField source="apellidos" />
           </ReferenceField>
           <TextField source="diurna" />
           <TextField source="nocturna" />
-          <TextField source="festivos" />
+          <TextField source="festivos" />S
           <TextField source="personalizada" />
           <EditButton />
         </Datagrid>
