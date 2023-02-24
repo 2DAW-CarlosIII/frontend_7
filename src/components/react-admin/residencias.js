@@ -42,9 +42,9 @@ export const ResidenciaList = () => {
             <TextField source="direccion" />
             <TextField source="cp" />
             <TextField source="localidad" />
+            <TextField source="telefono" />
             <TextField source="email" />
             <TextField source="tipo" />
-
             <EditButton />
           </Datagrid>
         )}
@@ -60,16 +60,15 @@ export const ResidenciaList = () => {
   export const ResidenciaEdit = () => (
     <Edit title={<ResidenciaTitle />}>
     <SimpleForm>
-      <TextField source="id" disabled />
-      <TextField source="nombre" />
-      <TextField source="CIF" />
-      <TextField source="telefono" />
-      <TextField source="email" />
-      <TextField source="direccion" />
-      <TextField source="cp" />
-      <TextField source="localidad" />
-      <TextField source="email" />
-      <TextField source="tipo" />
+      <TextInput source="id" disabled />
+      <TextInput source="nombre" />
+      <TextInput source="CIF" />
+      <TextInput source="telefono" />
+      <TextInput source="direccion" />
+      <TextInput source="cp" />
+      <TextInput source="localidad" />
+      <TextInput source="email" />
+      <TextInput source="tipo" />
     </SimpleForm>
     </Edit>
 );
@@ -78,15 +77,14 @@ export const ResidenciaCreate = () => (
   <Create>
       <SimpleForm>
         <TextInput source="id"/>
-        <TextField source="nombre" />
-        <TextField source="CIF" />
-        <TextField source="telefono" />
-        <TextField source="email" />
-        <TextField source="direccion" />
-        <TextField source="cp" />
-        <TextField source="localidad" />
-        <TextField source="email" />
-        <TextField source="tipo" />
+        <TextInput source="nombre" />
+        <TextInput source="CIF" />
+        <TextInput source="telefono" />
+        <TextInput source="direccion" />
+        <TextInput source="cp" />
+        <TextInput source="localidad" />
+        <TextInput source="email" />
+        <TextInput source="tipo" />
       </SimpleForm>
   </Create>
   );
